@@ -1,0 +1,17 @@
+name: First CI
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  run-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+
+      - name: Run app
+        run: python app.py
+
